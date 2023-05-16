@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "simple-translate"
+version = "0.1.0"
+description = "교내에서 간단하게 번역 API를 쓰기위한 서버"
+authors = ["Sichu0725 <choihc8511@gmail.com>"]
+readme = "README.md"
+packages = [{include = "simple_translate"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+fastapi = "^0.95.1"
+uvicorn = {extras = ["standard"], version = "^0.22.0"}
+python-dotenv = "^1.0.0"
+pillow = "^9.5.0"
+pytesseract = "^0.3.10"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
