@@ -8,10 +8,7 @@ import os
 load_dotenv(verbose=True)
 app = FastAPI()
 
-origins = [
-  "http://localhost:8000",
-  "http://localhost"
-]
+origins = ["*"]
 
 app.add_middleware(
   CORSMiddleware,
@@ -32,3 +29,5 @@ def translate(text: str = "", source_lang: str | None = None, target_lang: str =
   source_lang = api.detect_language(text)["langCode"]
   #translate
   return api.translate(text, source_lang, target_lang)
+
+

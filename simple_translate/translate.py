@@ -2,6 +2,22 @@ import requests
 from PIL import Image
 from pytesseract import image_to_string
 
+"""
+번역가능 언어
+한국어 : ko
+영어 : en
+일본어 : ja
+중국어 간체 : zh-CN
+중국어 번체 : zh-TW
+베트남어 : vi
+인도네시아어 : id
+독일어 : de
+이탈리아어 : it
+프랑스어 : fr
+민혁이 모국어(러시아어) : ru
+태국어 : th
+"""
+
 class NaverTranslationApi:
 	def __init__	(self, client_id, client_secret) :
 		self.client_id = client_id
@@ -25,3 +41,4 @@ class NaverTranslationApi:
 
 		response = requests.post('https://openapi.naver.com/v1/papago/detectLangs', headers=self.headers, data=data)
 		return response.json()
+	

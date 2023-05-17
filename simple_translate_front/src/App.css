@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;800&display=swap');
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  border-radius: 0;
+  border: none;
+  font-family: 'Nanum Gothic', sans-serif;
+}
+
+*:focus {
+  outline: none;
+}
+
+.header {
+  box-sizing: content-box;
+  height: 5vh;
+  margin-bottom: 5px;
+  padding: 10px;
+}
+
+.header span {
+  color: #5383e8;
+  font-weight: 800;
+}
+
+.header > * {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.header img {
+  height: 100%;
+}
+
+.src-tar-select > * {
+  width: 50%;
+  padding: 15px;
+  border: 1px solid #ccc;
+  background-color: white;
+  border-bottom: none;
+}
+
+textarea {
+  resize: none;
+  border: 1px solid #ccc;
+  min-height: 20vh;
+  font-size: 1.2em;
+  padding: 10px;
+}
+
+.translator {
+  width: calc(40vw + 50px);
+  display: block;
+  margin: 0 auto;
+}
+
+.src-lang > *,
+textarea {
+  display: block;
+  width: 100%;
+}
+
+.src-lang button {
+  border-left: 1px solid #5383e8;
+  border-right: 1px solid #5383e8;
+  font-size: 1.3em;
+  padding: 10px 0;
+  background-color: #5383e8;
+  color: white;
+  cursor: pointer;
+}
+
+.result-text {
+  position: relative;
+}
+
+.Loading__spinner___11Pm4 {
+  position: absolute !important;
+  top: 50% !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%) !important;
+}
+
+@media screen and (max-width: 768px) {
+  .header {
+    /* text-align: center; */
+    width: 90vw;
+    display: block;
+    margin: 0 auto;
+    font-size: 0.8em;
+  }
+  .translator {
+    width: 90vw;
+  }
+}
